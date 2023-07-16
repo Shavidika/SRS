@@ -1,0 +1,111 @@
+﻿<Window x:Class="POS.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POS"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="450" Width="800"
+                WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
+        >
+    <Grid>
+        <Border CornerRadius="60">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#FF4A148C" Offset="0"/>
+                    <GradientStop Color="#FF9C27B0" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Border CornerRadius="50" BorderThickness="5" Opacity="0.9">
+                <Border.BorderBrush>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#FF4A148C" Offset="0"/>
+                        <GradientStop Color="#FF9C27B0" Offset="0.75"/>
+                        <GradientStop Color="#FFD500F9" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                        <GradientStop Color="#FF000000" Offset="0"/>
+                        <GradientStop Color="#FF311B92" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="131"/>
+                        <RowDefinition Height="178*"/>
+                        <RowDefinition Height="131*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel>
+                        <TextBlock Text="SRS" Foreground="Snow" FontSize="48" Margin="0,10,0,0"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI Black"/>
+                        <TextBlock Text="The Largerst Student Registration System in Sri lanka" Margin="0 0 0 0 "
+                                   FontSize="30"
+                                   Foreground="LightBlue"
+                                   HorizontalAlignment="Center"
+                                   />
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1" Orientation="Vertical" Margin="250,0,250,0">
+                        <TextBlock Text="User Name" Foreground="White" TextAlignment="Center"
+                                   FontSize="20"
+                                   FontWeight="Medium"
+                                   Margin="0,35,0,0"/>
+                        <TextBox x:Name="txtUser"
+                                 FontSize="16"
+                                 FontWeight="Medium"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 CaretBrush="LightGray"
+                                 BorderBrush="White"
+                                 BorderThickness="0,0,0,2"
+                                 Height="20"
+                                 Padding="20,0,0,0"
+                                 VerticalAlignment="Center" Margin="0,3,0,0">
+                        </TextBox>
+                        <TextBlock Text="Password"
+                                   Foreground="White"
+                                   TextAlignment="center"
+                                   FontSize="20"
+                                   FontWeight="Medium"
+                                   Margin="0,15,0,0"/>
+                        <PasswordBox x:Name="txtPass"
+                                     FontSize="16"
+                                     FontWeight="Medium"                           
+                                     Foreground="White"
+                                     CaretBrush="LightGray"
+                                     BorderBrush="White"
+                                     Background="Transparent"
+                                     BorderThickness="0,0,0,2"
+                                     Height="20"
+                                     VerticalContentAlignment="Center"
+                                     Margin="0,5,0,0"
+                                     Padding="20,0,0,0"/>
+                    </StackPanel>
+
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Content="Close" Style="{StaticResource RoundButtonTemplate}"   Width="130"  
+                                    Margin="150 10 10 10" FontSize="15" Click="Button_Click_1" 
+                                    />
+                        <Button Grid.Column="1" Style="{StaticResource RoundButtonTemplate}" 
+                                Margin="10 10 150 10"
+                                Width="130" 
+                                    FontSize="15" Click="Button_Click">Login
+                        </Button>
+
+                    </Grid>
+                </Grid>
+            </Border>
+        </Border>
+    </Grid>
+</Window>
